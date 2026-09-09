@@ -107,6 +107,12 @@
         "level": "dataset",
         "levelDescription": "Gjelder hele datasettet. Hvis omfang ikke er oppgitt under en overskrift, gjelder teksten for hele datasettet og alle leveranser"
       }
+    },
+    {
+      "specificationScope": {
+        "scopeIdentification": "UML-modell",
+        "level": "dataset"
+      }
     }
   ],
   "dataQualitySection": {
@@ -224,6 +230,44 @@
           }
         ],
         "deliveryScope": "Tjeneste"
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "deliveryMediumName": "GeoPackage: uml-modell",
+          "deliveryService": {
+            "serviceEndpoint": "https://raw.githubusercontent.com/ToreFreddyB/produktspesifikasjon_nve/main/produktspesifikasjon/faresonekart-for-skred-i-bratt-terreng/uml-modell/uml-modell.gpkg",
+            "serviceProperty": {
+              "type": "Fil",
+              "value": "Nedlasting"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "GPKG"
+          }
+        ]
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "deliveryMediumName": "GML/XSD-skjema: uml-modell",
+          "deliveryService": {
+            "serviceEndpoint": "https://raw.githubusercontent.com/ToreFreddyB/produktspesifikasjon_nve/main/produktspesifikasjon/faresonekart-for-skred-i-bratt-terreng/uml-modell/schema/xsd/INPUT/uml-modell.xsd",
+            "serviceProperty": {
+              "type": "Fil",
+              "value": "Nedlasting"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "XSD"
+          }
+        ]
       }
     }
   ],
