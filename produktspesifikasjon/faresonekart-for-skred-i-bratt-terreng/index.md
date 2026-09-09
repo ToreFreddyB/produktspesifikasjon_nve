@@ -107,6 +107,25 @@ Ved vurdering eller prosjektering av sikringstiltak er faresoner for hver enkelt
 
 **Nivåbeskrivelse**: Gjelder hele datasettet. Hvis omfang ikke er oppgitt under en overskrift, gjelder teksten for hele datasettet og alle leveranser
 
+### UML-modell
+
+**Nivå**: dataset
+
+
+## Datainnhold og struktur
+
+
+
+### Datamodell - UML-modell
+
+
+
+<a href="uml-modell/uml-modell_feature_catalogue.png" title="Klikk for stor visning"><img src="uml-modell/uml-modell_feature_catalogue.png" alt="Datamodell UML-modell" style="max-width: 100%; height: auto;" /></a>
+
+
+
+➡️ [Se full datamodell for omfang "UML-modell" (diagram per pakke og objektkatalog)](uml-modell/objektkatalog.html)
+
 ## Datakvalitet
 
 **Nivå**: dataset
@@ -152,6 +171,8 @@ Ved vurdering eller prosjektering av sikringstiltak er faresoner for hver enkelt
 | --- | --- | --- | --- | --- |
 | WMS-tjeneste | [Lenke](https://kart.nve.no/enterprise/services/Skredfaresoner3/MapServer/WMSServer?request=GetCapabilities&service=WMS) | OGC:WMS | GeoJSON, GeoJson |  |
 | REST-API | [Lenke](https://kart.nve.no/enterprise/rest/services/Skredfaresoner3/MapServer) | W3C:REST | GeoJSON |  |
+| GeoPackage: uml-modell | [Lenke](https://raw.githubusercontent.com/ToreFreddyB/produktspesifikasjon_nve/main/produktspesifikasjon/faresonekart-for-skred-i-bratt-terreng/uml-modell/uml-modell.gpkg) | Nedlasting | GPKG |  |
+| GML/XSD-skjema: uml-modell | [Lenke](https://raw.githubusercontent.com/ToreFreddyB/produktspesifikasjon_nve/main/produktspesifikasjon/faresonekart-for-skred-i-bratt-terreng/uml-modell/schema/xsd/INPUT/uml-modell.xsd) | Nedlasting | XSD |  |
 
 ## Metadata
 
