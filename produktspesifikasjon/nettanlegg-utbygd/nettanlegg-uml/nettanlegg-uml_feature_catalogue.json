@@ -1,0 +1,370 @@
+[
+  {
+    "name": "Transformatorstasjon",
+    "description": "stasjon som transformerer spenningen fra ett spenningsnivå til et annet",
+    "attributes": [
+      {
+        "name": "geometri",
+        "type": "GM_Point",
+        "description": "registreres geometri",
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "GEOMETRI"
+        }
+      },
+      {
+        "name": "spenning_kV",
+        "type": "Real",
+        "description": "spenning er kraften eller trykket som skyver strøm gjennom kraftledninger. Her angitt i kilovolt (kV)",
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "SPENNING_KV"
+        }
+      },
+      {
+        "name": "kvalitet",
+        "type": "Posisjonskvalitet",
+        "cardinality": "1",
+        "attributes": [
+          {
+            "name": "målemetode",
+            "type": "Målemetode",
+            "description": "metode for måling i grunnriss (x,y), og høyde (z) når metoden er den samme som ved måling i grunnriss",
+            "cardinality": "1",
+            "valueDomain": {
+              "kind": "codelist",
+              "definition": "metode som ligger til grunn for registrering av posisjon\n\n\n-- Definition - -\nmethod on which registration of position is based",
+              "asDictionary": "true",
+              "codeList": "https://register.geonorge.no/sosi-kodelister/generelle-konsepter/4.5/målemetodekode"
+            },
+            "taggedValues": {
+              "SOSI_navn": "MÅLEMETODE"
+            }
+          },
+          {
+            "name": "nøyaktighet",
+            "type": "Integer",
+            "description": "punktstandardavviket i grunnriss for punkter samt tverravvik for linjer\n\nMerknad:\nOppgitt i cm",
+            "cardinality": "0..1",
+            "taggedValues": {
+              "SOSI_navn": "NØYAKTIGHET"
+            }
+          }
+        ]
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "NettanleggUtbygdFellesEgenskaper"
+      ],
+      "associations": []
+    },
+    "package": "NettanleggUtbygd-1.1"
+  },
+  {
+    "name": "NettanleggUtbygdFellesEgenskaper",
+    "description": "abstrakt objekt som bærer fellesegenskaper",
+    "attributes": [
+      {
+        "name": "nettnivå",
+        "type": "NveNettnivå",
+        "description": "nettnivå viser inndelingen av det norske strømnettet. Det er inndelt etter ulike spenningsnivåer og funksjonalitet.\n\nMerknad: Ikke alle kodeverdier brukes i DOK-datasettet",
+        "cardinality": "1",
+        "valueDomain": {
+          "kind": "codelist",
+          "definition": "nvenettnivå viser inndelingen av det norske strømnettet. Det er inndelt etter ulike spenningsnivåer og funksjonalitet.\n\nMerknad: Ikke alle kodeverdier brukes i DOK-datasettet",
+          "asDictionary": "true",
+          "codeList": "https://register.geonorge.no/sosi-kodelister/energi/nvenettniv%C3%A5"
+        },
+        "taggedValues": {
+          "SOSI_navn": "NETTNIVÅ"
+        }
+      },
+      {
+        "name": "drifter",
+        "type": "CharacterString",
+        "description": "innrapportert navn på drifter/konsesjonær",
+        "cardinality": "1"
+      },
+      {
+        "name": "drifterOrgnr",
+        "type": "Integer",
+        "description": "organisasjonsnummer til innrapportert drifter/konsesjonær",
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "DRIFTERORGNR"
+        }
+      },
+      {
+        "name": "navn",
+        "type": "CharacterString",
+        "description": "navn på stasjon eller ledningsstrekket, typisk vil dette være en plasseringsangivelse av typen 'fra stasjon - til stasjon', eventuelt et mastenummer",
+        "cardinality": "0..1",
+        "taggedValues": {
+          "SOSI_navn": "NAVN"
+        }
+      },
+      {
+        "name": "driftsattår",
+        "type": "Integer",
+        "description": "årstall anlegg ble idriftsatt",
+        "cardinality": "0..1",
+        "taggedValues": {
+          "SOSI_navn": "DRIFTSATTÅR"
+        }
+      },
+      {
+        "name": "oppdateringsdato",
+        "type": "DateTime",
+        "description": "dato for når konsesjonær/drifter sendte dataene inn til NVEs databaser",
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "OPPDATERINGSDATO"
+        }
+      },
+      {
+        "name": "ident",
+        "type": "Identifikasjon",
+        "description": "unik identifikasjon av et objekt",
+        "cardinality": "1",
+        "attributes": [
+          {
+            "name": "lokalId",
+            "type": "CharacterString",
+            "description": "lokal identifikator av et objekt\n\nMerknad: Det er dataleverendørens ansvar å sørge for at den lokale identifikatoren er unik innenfor navnerommet.",
+            "cardinality": "1",
+            "taggedValues": {
+              "SOSI_navn": "LOKALID"
+            }
+          },
+          {
+            "name": "navnerom",
+            "type": "CharacterString",
+            "description": "navnerom som unikt identifiserer datakilden til et objekt, anbefales å være en http-URI\n\nEksempel: http://data.geonorge.no/SentraltStedsnavnsregister/1.0\n\nMerknad : Verdien for nanverom vil eies av den dataprodusent som har ansvar for de unike identifikatorene og må være registrert i data.geonorge.no eller data.norge.no",
+            "cardinality": "1",
+            "taggedValues": {
+              "SOSI_navn": "NAVNEROM"
+            }
+          }
+        ]
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    },
+    "package": "NettanleggUtbygd-1.1"
+  },
+  {
+    "name": "Mast",
+    "description": "konstruksjon for å feste ledninger eller andre objekter i. Kan bestå av en eller flere stolper. Kan være konstruert i tre, metall, kompositt eller betong",
+    "attributes": [
+      {
+        "name": "mastehøyde",
+        "type": "Real",
+        "description": "mastehøyde i meter (m). Referansehøyde varierer, men typisk er høydeangivelsen mastas høyde over bakken",
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "MASTEHØYDE"
+        }
+      },
+      {
+        "name": "geometri",
+        "type": "GM_Point",
+        "description": "registreres geometri",
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "GEOMETRI"
+        }
+      },
+      {
+        "name": "kvalitet",
+        "type": "PosisjonskvalitetH",
+        "cardinality": "1",
+        "attributes": [
+          {
+            "name": "målemetode",
+            "type": "Målemetode",
+            "description": "metode for måling i grunnriss (x,y), og høyde (z) når metoden er den samme som ved måling i grunnriss",
+            "cardinality": "1",
+            "valueDomain": {
+              "kind": "codelist",
+              "definition": "metode som ligger til grunn for registrering av posisjon\n\n\n-- Definition - -\nmethod on which registration of position is based",
+              "asDictionary": "true",
+              "codeList": "https://register.geonorge.no/sosi-kodelister/generelle-konsepter/4.5/målemetodekode"
+            },
+            "taggedValues": {
+              "SOSI_navn": "MÅLEMETODE"
+            }
+          },
+          {
+            "name": "nøyaktighet",
+            "type": "Integer",
+            "description": "punktstandardavviket i grunnriss for punkter samt tverravvik for linjer\n\nMerknad:\nOppgitt i cm",
+            "cardinality": "0..1",
+            "taggedValues": {
+              "SOSI_navn": "NØYAKTIGHET"
+            }
+          },
+          {
+            "name": "målemetodeHøyde",
+            "type": "Målemetode",
+            "description": "metode for å måle objekttypens høydeverdi",
+            "cardinality": "0..1",
+            "valueDomain": {
+              "kind": "codelist",
+              "definition": "metode som ligger til grunn for registrering av posisjon\n\n\n-- Definition - -\nmethod on which registration of position is based",
+              "asDictionary": "true",
+              "codeList": "https://register.geonorge.no/sosi-kodelister/generelle-konsepter/4.5/målemetodekode"
+            },
+            "taggedValues": {
+              "SOSI_navn": "MÅLEMETODEHØYDE"
+            }
+          },
+          {
+            "name": "nøyaktighetHøyde",
+            "type": "Integer",
+            "description": "nøyaktighet for høyden i cm",
+            "cardinality": "0..1"
+          }
+        ]
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "NettanleggUtbygdFellesEgenskaper"
+      ],
+      "associations": []
+    },
+    "package": "NettanleggUtbygd-1.1"
+  },
+  {
+    "name": "Luftledning",
+    "description": "ledninger plassert over bakken, for overføring av elektrisitet i kraftnettet",
+    "attributes": [
+      {
+        "name": "geometri",
+        "type": "GM_Curve",
+        "description": "registreres geometri",
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "GEOMETRI"
+        }
+      },
+      {
+        "name": "spenning_kV",
+        "type": "Real",
+        "description": "spenning er kraften eller trykket som skyver strøm gjennom kraftledninger. Her angitt i kilovolt (kV)",
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "SPENNING_KV"
+        }
+      },
+      {
+        "name": "kvalitet",
+        "type": "Posisjonskvalitet",
+        "cardinality": "1",
+        "attributes": [
+          {
+            "name": "målemetode",
+            "type": "Målemetode",
+            "description": "metode for måling i grunnriss (x,y), og høyde (z) når metoden er den samme som ved måling i grunnriss",
+            "cardinality": "1",
+            "valueDomain": {
+              "kind": "codelist",
+              "definition": "metode som ligger til grunn for registrering av posisjon\n\n\n-- Definition - -\nmethod on which registration of position is based",
+              "asDictionary": "true",
+              "codeList": "https://register.geonorge.no/sosi-kodelister/generelle-konsepter/4.5/målemetodekode"
+            },
+            "taggedValues": {
+              "SOSI_navn": "MÅLEMETODE"
+            }
+          },
+          {
+            "name": "nøyaktighet",
+            "type": "Integer",
+            "description": "punktstandardavviket i grunnriss for punkter samt tverravvik for linjer\n\nMerknad:\nOppgitt i cm",
+            "cardinality": "0..1",
+            "taggedValues": {
+              "SOSI_navn": "NØYAKTIGHET"
+            }
+          }
+        ]
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "NettanleggUtbygdFellesEgenskaper"
+      ],
+      "associations": []
+    },
+    "package": "NettanleggUtbygd-1.1"
+  },
+  {
+    "name": "Sjøkabel",
+    "description": "kabler plassert i vannsøylen eller på bunnen av elv/innsjø/fjord/hav, for overføring av elektrisitet i kraftnettet",
+    "attributes": [
+      {
+        "name": "geometri",
+        "type": "GM_Curve",
+        "description": "registreres geometri",
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "GEOMETRI"
+        }
+      },
+      {
+        "name": "spenning_kV",
+        "type": "Real",
+        "description": "spenning er kraften eller trykket som skyver strøm gjennom kraftledninger. Her angitt i kilovolt (kV)",
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "SPENNING_KV"
+        }
+      },
+      {
+        "name": "kvalitet",
+        "type": "Posisjonskvalitet",
+        "cardinality": "1",
+        "attributes": [
+          {
+            "name": "målemetode",
+            "type": "Målemetode",
+            "description": "metode for måling i grunnriss (x,y), og høyde (z) når metoden er den samme som ved måling i grunnriss",
+            "cardinality": "1",
+            "valueDomain": {
+              "kind": "codelist",
+              "definition": "metode som ligger til grunn for registrering av posisjon\n\n\n-- Definition - -\nmethod on which registration of position is based",
+              "asDictionary": "true",
+              "codeList": "https://register.geonorge.no/sosi-kodelister/generelle-konsepter/4.5/målemetodekode"
+            },
+            "taggedValues": {
+              "SOSI_navn": "MÅLEMETODE"
+            }
+          },
+          {
+            "name": "nøyaktighet",
+            "type": "Integer",
+            "description": "punktstandardavviket i grunnriss for punkter samt tverravvik for linjer\n\nMerknad:\nOppgitt i cm",
+            "cardinality": "0..1",
+            "taggedValues": {
+              "SOSI_navn": "NØYAKTIGHET"
+            }
+          }
+        ]
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "NettanleggUtbygdFellesEgenskaper"
+      ],
+      "associations": []
+    },
+    "package": "NettanleggUtbygd-1.1"
+  }
+]

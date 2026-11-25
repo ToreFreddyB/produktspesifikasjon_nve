@@ -1,0 +1,453 @@
+{
+  "overview": "Denne produktspesifikasjonen er autogenerert fra metadata i Geonorge og datamodell fra SOSI modellregister og/eller OGC API Features. Noe ekstra informasjon kan ha blitt lagt til gjennom manuell prosess. Produktspesifikasjonen er i henhold til standarden: 'Geografisk informasjon - Dataproduktspesifikasjoner' (ISO19131:2022)",
+  "title": "Nettanlegg utbygd",
+  "format": "text/html",
+  "date": {
+    "creation": "2016-01-07",
+    "revision": "2026-09-01"
+  },
+  "language": "nor",
+  "contact": {
+    "organizationName": "Norges vassdrags- og energidirektorat",
+    "logo": "https://register.geonorge.no/data/organizations/970205039_NVE_liten.png",
+    "electronicMailAddress": "gisstotte@nve.no",
+    "role": "owner"
+  },
+  "identificationSection": {
+    "title": "Nettanlegg utbygd",
+    "abstract": "Nettanlegg utbygd viser beliggenhet av luftledning, sjøkabler, transformatorstasjoner og master i transmisjons- og regionalnettet sammen med noe nøkkelinformasjon, som spenningsnivå, nettnivå, oppdateringsdato og drifter/anleggskonsesjonær.  Distribusjonsnett er ikke en del av datasettet. Jordkabler er heller ikke inkludert. \nDatasettet oppdateres av konsesjonærer i regional- og transmisjonsnettet. De er pålagt å oppdatere hver 6. måned dersom det har blitt gjort endringer nettet. De har mulighet til å oppdatere så ofte de ønsker.",
+    "purpose": {
+      "summary": "Innrapportering av data til NVE skal dekke NVEs eget behov for oversikt. NVE har ikke myndighet til å kreve data fra anleggskonsesjonærer utover det NVE selv har behov for i sitt arbeid.",
+      "useCase": {
+        "name": "Bruksområde",
+        "summary": "Datasettets bruk i planarbeidet:\nNVE har ikke god oversikt over hvordan datasettet benyttes i planarbeid. · Datasettet inneholder ikke informasjon om byggeforbudssoner eller stråling. Dette er informasjon som heller ikke kan utledes direkte av dataene. Det er eventuelt anleggskonsesjonær som har informasjon og data om dette. \nKommunene bør alltid oppfordres til å kontakte dataeier for oppdatert informasjon. Dette er nettanleggskonsesjonærer, ikke NVE.\n\nDatasettet kan benyttes ved ROS-analyser og ved utarbeidelse av hensynssoner knyttet til elektriske anlegg. NVE fraskriver seg ansvar for skade som skyldes feil i data og feil bruk av data."
+      }
+    },
+    "topicCategory": [
+      "Ledningsinformasjon"
+    ],
+    "spatialRepresentationType": "Vektor",
+    "spatialResolution": {
+      "equivalentScale": "50000"
+    },
+    "uniqueId": "https://data.geonorge.no/sosi/energi/nettanlegg",
+    "keyword": [
+      "transformatorstasjoner",
+      "sjøkabler",
+      "master",
+      "transmisjonsnett",
+      "regionalnett",
+      "kraftlinjer",
+      "Energiressurser",
+      "beredskapsbase",
+      "Inspire",
+      "Norge digitalt",
+      "geodataloven",
+      "modellbaserteVegprosjekter",
+      "fellesDatakatalog",
+      "Energi",
+      "Linjer",
+      "Kabel",
+      "Luftlinje",
+      "Mast",
+      "Stasjoner",
+      "komponentkodeverdi",
+      "komponentkodesystem",
+      "typebetegnelse",
+      "tverrsnitt",
+      "lengdetype",
+      "sysbasID",
+      "linjehøyde",
+      "seilingshøyde",
+      "konstruksjon",
+      "mastehøyde",
+      "luftfartshindermerking",
+      "antallBrytere",
+      "drifter",
+      "kildeLokalID",
+      "drifterOrgnr",
+      "driftsattår",
+      "driftsmerking",
+      "eierOrgnr",
+      "kildeDato",
+      "kildeEndretDato",
+      "kildeOrgnr",
+      "nettnivå",
+      "nveOpprettetDato",
+      "spenning",
+      "antallGeneratorer",
+      "antallTrafoer",
+      "totalYtelseGeneratorer",
+      "totalYtelseTrafoer",
+      "Posisjonskvalitet2D",
+      "EL_Mast",
+      "EL_Luftlinje",
+      "EL_Hengekabel",
+      "EL_Sjøkabel",
+      "EL_Transformatorstasjon",
+      "linje",
+      "Norge"
+    ],
+    "restriction": {
+      "legalConstraints": {
+        "accessConstraints": "Åpne data",
+        "useConstraints": "Lisens",
+        "license": "Norsk lisens for offentlige data (NLOD)",
+        "licenseUrl": "http://data.norge.no/nlod/no/1.0"
+      }
+    },
+    "contact": [
+      {
+        "organizationName": "Norges vassdrags- og energidirektorat",
+        "electronicMailAddress": "gisstotte@nve.no",
+        "role": "owner"
+      },
+      {
+        "organizationName": "Norges vassdrags- og energidirektorat",
+        "electronicMailAddress": "gisstotte@nve.no",
+        "role": "pointOfContact"
+      },
+      {
+        "organizationName": "Norges vassdrags- og energidirektorat",
+        "electronicMailAddress": "gisstotte@nve.no",
+        "role": "publisher"
+      }
+    ],
+    "maintenance": "Hvert halvår",
+    "extent": {
+      "geographicElement": {
+        "westBoundLongitude": "2.0",
+        "eastBoundLongitude": "33.0",
+        "southBoundLatitude": "57.0",
+        "northBoundLatitude": "72.0"
+      },
+      "geographicDescription": [
+        "Norges fastland"
+      ],
+      "temporalElement": {
+        "timePeriod": {
+          "beginPosition": "2016-01-07",
+          "endPosition": "2026-09-01"
+        }
+      }
+    },
+    "date": {
+      "creation": "2016-01-07",
+      "publication": "2016-01-07",
+      "revision": "2026-09-01"
+    },
+    "language": "nor"
+  },
+  "scopeSection": [
+    {
+      "specificationScope": {
+        "scopeIdentification": "Hele datasettet",
+        "level": "dataset",
+        "levelDescription": "Gjelder hele datasettet. Hvis omfang ikke er oppgitt under en overskrift, gjelder teksten for hele datasettet og alle leveranser"
+      }
+    },
+    {
+      "specificationScope": {
+        "scopeIdentification": "nettanlegg_uml",
+        "level": "dataset"
+      }
+    }
+  ],
+  "referenceSystemSection": {
+    "spatialReferenceSystem": [
+      {
+        "code": "EPSG:25832",
+        "name": "EUREF89 UTM sone 32, 2d"
+      },
+      {
+        "code": "EPSG:25833",
+        "name": "EUREF89 UTM sone 33, 2d"
+      },
+      {
+        "code": "EPSG:25835",
+        "name": "EUREF89 UTM sone 35, 2d"
+      },
+      {
+        "code": "EPSG:3035",
+        "name": "EUREF89 / ETRS89-LAEA Europe"
+      },
+      {
+        "code": "EPSG:4258",
+        "name": "EUREF 89 Geografisk (ETRS 89) 2d"
+      },
+      {
+        "code": "EPSG:25832",
+        "name": "EUREF89 UTM sone 32, 2d"
+      }
+    ]
+  },
+  "dataQualitySection": {
+    "scope": {
+      "level": "dataset"
+    },
+    "report": [
+      {
+        "nameOfMeasure": "COMMISSION REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services",
+        "descriptiveResult": "Datasettet er i henhold til nasjonal produktspesifikasjon"
+      },
+      {
+        "nameOfMeasure": "SOSI produktspesifikasjon: Nettanlegg",
+        "descriptiveResult": "Dataene er i henhold til produktspesifikasjonen"
+      },
+      {
+        "nameOfMeasure": "Sosi applikasjonsskjema",
+        "descriptiveResult": "SOSI-filer er i henhold til applikasjonsskjema"
+      },
+      {
+        "nameOfMeasure": "Sosi applikasjonsskjema",
+        "descriptiveResult": "GML-filer er i henhold til applikasjonsskjema"
+      },
+      {
+        "nameOfMeasure": "Prosentvis dekning i forhold til datasettets utstrekning",
+        "measureDescription": "Datasettets faktiske kartlagte areal i forhold til datasettets spesifiserte utstrekning",
+        "result": "90"
+      },
+      {
+        "nameOfMeasure": "Prosentvis oppfyllelse av FAIR-prinsipper",
+        "measureDescription": "Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)",
+        "result": "98"
+      }
+    ]
+  },
+  "maintenanceSection": {
+    "maintenanceAndUpdateFrequency": "Hvert halvår",
+    "maintenanceAndUpdateStatement": "Fullført"
+  },
+  "dataCaptureAndProductionSection": {
+    "DataAcquisitionAndProcessing": {
+      "dataCaptureStatement": "Datasettets forvaltning: \nNVEs oversikt over nettanlegg baserer seg på innrapporterte data fra anleggskonsesjonærer (nettselskaper og andre konsesjonærer). Dette gjøres gjennom tjenesten NettKart.nve.no. NVE produserer ikke selv nettanleggsdata og er ikke kilden til dataene. \n\nDatasettets kvalitet og dekning: \nNVEs nettanleggsdata er ikke til enhver tid oppdaterte eller komplette. Overføringsanlegg og stasjoner skal rapporteres, mast er frivillig å rapportere. Det er nettanleggskonsesjonærers eget ansvar å ha god oversikt og gode data over sine anlegg. NVE har ikke kapasitet til å kvalitetssjekke data mottatt fra anleggseier utover enkle konsistenssjekker av egenskaper. Geometri sjekkes ikke. Kvaliteten og dekningsgraden kan variere stort mellom ulike anleggskonsesjonærer og også innad i den enkelte anleggskonsesjonær sitt datasett."
+    }
+  },
+  "portrayal": {
+    "name": "Tegneregler",
+    "linkage": "https://register.geonorge.no/register/versjoner/tegneregler/norges-vassdrags-og-energidirektorat/nettanlegg"
+  },
+  "deliverySection": [
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "unitsOfDelivery": "fylkesvis, kommunevis, landsfiler",
+          "deliveryMediumName": "Geonorge nedlastning",
+          "deliveryService": {
+            "serviceEndpoint": "https://nedlasting.geonorge.no/api/capabilities/9f71a24b-9997-409f-8e42-ce6f0c62e073",
+            "serviceProperty": {
+              "type": "Geonorge nedlastning",
+              "value": "GEONORGE:DOWNLOAD"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "FGDB"
+          },
+          {
+            "formatName": "GML"
+          },
+          {
+            "formatName": "PostGIS"
+          },
+          {
+            "formatName": "SOSI"
+          }
+        ]
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "unitsOfDelivery": "fylkesvis, kommunevis, landsfiler",
+          "deliveryMediumName": "Egen nedlastningsside",
+          "deliveryService": {
+            "serviceEndpoint": "https://nedlasting.nve.no/gis/",
+            "serviceProperty": {
+              "type": "Egen nedlastningsside",
+              "value": "WWW:DOWNLOAD-1.0-http--download"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "FGDB"
+          },
+          {
+            "formatName": "GML"
+          },
+          {
+            "formatName": "GeoJSON"
+          }
+        ]
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "unitsOfDelivery": "fylkesvis, kommunevis, landsfiler",
+          "deliveryMediumName": "Atom Feed",
+          "deliveryService": {
+            "serviceEndpoint": "http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Nettanlegg_AtomFeedFGDB.xml",
+            "serviceProperty": {
+              "type": "Atom Feed",
+              "value": "W3C:AtomFeed"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "FGDB"
+          }
+        ]
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "unitsOfDelivery": "fylkesvis, kommunevis, landsfiler",
+          "deliveryMediumName": "Atom Feed",
+          "deliveryService": {
+            "serviceEndpoint": "http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Nettanlegg_AtomFeedGML.xml",
+            "serviceProperty": {
+              "type": "Atom Feed",
+              "value": "W3C:AtomFeed"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "GML"
+          }
+        ]
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "unitsOfDelivery": "fylkesvis, kommunevis, landsfiler",
+          "deliveryMediumName": "Atom Feed",
+          "deliveryService": {
+            "serviceEndpoint": "http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Nettanlegg_AtomFeedPostGIS.xml",
+            "serviceProperty": {
+              "type": "Atom Feed",
+              "value": "W3C:AtomFeed"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "PostGIS"
+          }
+        ]
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "unitsOfDelivery": "fylkesvis, kommunevis, landsfiler",
+          "deliveryMediumName": "Atom Feed",
+          "deliveryService": {
+            "serviceEndpoint": "http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Nettanlegg_AtomFeedSOSI.xml",
+            "serviceProperty": {
+              "type": "Atom Feed",
+              "value": "W3C:AtomFeed"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "SOSI"
+          }
+        ]
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "deliveryMediumName": "Nettanlegg utbygd WMS",
+          "deliveryService": {
+            "serviceEndpoint": "https://kart.nve.no/enterprise/services/Nettanlegg5/MapServer/WMSServer?request=GetCapabilities&service=WMS",
+            "serviceProperty": {
+              "type": "Nettanlegg utbygd WMS",
+              "value": "WMS-tjeneste"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "WMS",
+            "version": "1.3.0"
+          }
+        ],
+        "deliveryScope": "Tjeneste"
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "deliveryMediumName": "GeoPackage: nettanlegg-uml",
+          "deliveryService": {
+            "serviceEndpoint": "https://raw.githubusercontent.com/ToreFreddyB/produktspesifikasjon_nve/main/produktspesifikasjon/nettanlegg-utbygd/nettanlegg-uml/nettanlegg-uml.gpkg",
+            "serviceProperty": {
+              "type": "Fil",
+              "value": "Nedlasting"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "GPKG"
+          }
+        ]
+      }
+    }
+  ],
+  "metadataSection": {
+    "metadataStandard": "ISO19115",
+    "metadataStandardVersion": "2003",
+    "metadataDate": "2026-11-25",
+    "language": "nor",
+    "contact": {
+      "organizationName": "Norges vassdrags- og energidirektorat",
+      "logo": "https://register.geonorge.no/data/organizations/970205039_NVE_liten.png",
+      "electronicMailAddress": "gisstotte@nve.no",
+      "role": "pointOfContact"
+    },
+    "metadataIdentifier": {
+      "authority": "Geonorge",
+      "code": "9f71a24b-9997-409f-8e42-ce6f0c62e073",
+      "codeSpace": "https://kartkatalog.geonorge.no/metadata/",
+      "metadataLinkage": "https://kartkatalog.geonorge.no/metadata/9f71a24b-9997-409f-8e42-ce6f0c62e073"
+    }
+  },
+  "additionalReferences": [
+    {
+      "title": "Produktark",
+      "href": "https://register.geonorge.no/register/versjoner/produktark/norges-vassdrags-og-energidirektorat/nettanlegg"
+    },
+    {
+      "title": "Produktside",
+      "href": "https://www.nve.no/energi/energisystem/nett/kraftsystemdata/nettkart/"
+    }
+  ],
+  "chapterAutofill": {
+    "om_spesifikasjonen": 10,
+    "om_produktet": 164,
+    "formaal": 32,
+    "bruksomraade": 92,
+    "omfang": 24,
+    "datainnhold_og_struktur": 0,
+    "referansesystem": 36,
+    "datakvalitet": 103,
+    "datafangst_og_produksjon": 109,
+    "vedlikehold": 3,
+    "presentasjon": 2,
+    "leveranse": 82,
+    "metadata": 15,
+    "tilleggsinformasjon": 4,
+    "datamodell": 678
+  },
+  "specificationContact": "Norges vassdrags- og energidirektorat, [gisstotte@nve.no](mailto:gisstotte@nve.no)"
+}
