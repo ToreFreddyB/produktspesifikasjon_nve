@@ -1,0 +1,12 @@
+metadataId: 9f71a24b-9997-409f-8e42-ce6f0c62e073
+output_directory: produktspesifikasjon
+product_slug: nettanlegg_utbygd
+updated: '2026-11-25'
+outputs: geopackage
+scopes:
+- name: nettanlegg_uml
+  url: https://sosi.geonorge.no/svn/SOSI/SOSI%20Del%203/Norges%20vassdrags-%20og%20energidirektorat/Nettanlegg_DOK-2.0.xml
+  generator: xmi
+  description: ''
+  package: EAPK_AA92F74B_3569_46c4_8EB6_09EF4955EC95
+  package_name: NettanleggUtbygd-1.1
