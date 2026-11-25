@@ -1,0 +1,90 @@
+@startuml
+' For wide diagrams, render with: plantuml -DPLANTUML_LIMIT_SIZE=16384 ...
+' The 'scale max' directive below caps the rendered output to prevent the
+' default PlantUML 4096px size limit from cropping the diagram.
+scale max 4000*4000
+
+title Nettanlegg utbygd - nettanlegg_uml - Objekttyper
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam wrapWidth 200
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Objekttyper" {
+
+  class Transformatorstasjon <<featureType>> {
+    + geometri [1] : GM_Point
+    + spenning_kV [1] : Real
+    + kvalitet [1] : Posisjonskvalitet
+  }
+
+  class NettanleggUtbygdFellesEgenskaper <<featureType>> {
+    + nettnivå [1] : NveNettnivå
+    + drifter [1] : CharacterString
+    + drifterOrgnr [1] : Integer
+    + navn [0..1] : CharacterString
+    + driftsattår [0..1] : Integer
+    + oppdateringsdato [1] : Date
+    + ident [1] : Identifikasjon
+  }
+
+  class Mast <<featureType>> {
+    + mastehøyde [1] : Real
+    + geometri [1] : GM_Point
+    + kvalitet [1] : PosisjonskvalitetH
+  }
+
+  class Luftledning <<featureType>> {
+    + geometri [1] : GM_Curve
+    + spenning_kV [1] : Real
+    + kvalitet [1] : Posisjonskvalitet
+  }
+
+  class "Sjøkabel" as Sj_kabel <<featureType>> {
+    + geometri [1] : GM_Curve
+    + spenning_kV [1] : Real
+    + kvalitet [1] : Posisjonskvalitet
+  }
+
+  class Posisjonskvalitet <<dataType>> {
+    + målemetode [1] : Målemetode
+    + nøyaktighet [0..1] : Integer
+  }
+
+  class Identifikasjon <<dataType>> {
+    + lokalId [1] : CharacterString
+    + navnerom [1] : CharacterString
+  }
+
+  class PosisjonskvalitetH <<dataType>> {
+    + målemetode [1] : Målemetode
+    + nøyaktighet [0..1] : Integer
+    + målemetodeHøyde [0..1] : Målemetode
+    + nøyaktighetHøyde [0..1] : Integer
+  }
+}
+
+  NettanleggUtbygdFellesEgenskaper <|-- Transformatorstasjon
+  NettanleggUtbygdFellesEgenskaper <|-- Mast
+  NettanleggUtbygdFellesEgenskaper <|-- Luftledning
+  NettanleggUtbygdFellesEgenskaper <|-- Sj_kabel
+
+@enduml
